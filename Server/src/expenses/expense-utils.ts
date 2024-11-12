@@ -25,7 +25,6 @@ export async function createExpenseServer(req: Request, res: Response, db: Datab
 
 export async function deleteExpense(req: Request, res: Response, db: Database) {
     // TO DO: Implement deleteExpense function
-    console.log(`Deleting expense with id: ${req.params.id}`)
     const { id } = req.params
 
     if (!id) {
@@ -42,7 +41,7 @@ export async function deleteExpense(req: Request, res: Response, db: Database) {
 export async function getExpenses(req: Request, res: Response, db : Database) {
 
     try{
-        const data: Expense[] = await db.all("SELECT * FROM expenses;", (err: Error | null, rows: Expense[]) => {
+        const data = await db.all("SELECT * FROM expenses;", (err: Error | null, rows: Expense[]) => {
             if(err) throw err;
             console.log(rows);
         });

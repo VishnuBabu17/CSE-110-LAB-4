@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import { API_BASE_URL } from "../constants/constants";
 import { Expense } from "../types/types";
-import { AppContext } from "../context/AppContext";
 
 // Function to create an expense in the backend. Method: POST
 export const createExpense = async (expense: Expense): Promise<Expense> => {

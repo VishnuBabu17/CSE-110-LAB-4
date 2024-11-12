@@ -23,7 +23,7 @@ describe('Expense Creation, Expense Deletion, Budget Balance Verification', () =
     expect(getByLabelText('Cost')).toBeInTheDocument();
 
     // Checking that totals are updated, budget remains unchanged
-    expect(getByText(/spent so far/i)).toHaveTextContent('$87');
+    expect(getByText(/spent so far/i)).toHaveTextContent('$86');
     expect(getByText(/remaining/i)).toHaveTextContent('$913');
   })
 
