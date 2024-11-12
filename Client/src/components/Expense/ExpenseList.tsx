@@ -5,7 +5,7 @@ import { Expense } from "../../types/types";
 import { fetchExpenses } from "../../utils/expense-utils";
 
 const ExpenseList = () => {
-  const { expenses, setExpenses } = useContext(AppContext);
+  const { expenses = [], setExpenses } = useContext(AppContext);
 
   // Fetch expenses on component mount
   useEffect(() => {

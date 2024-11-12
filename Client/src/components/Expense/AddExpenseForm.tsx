@@ -5,7 +5,7 @@ import { createExpense } from "../../utils/expense-utils";
 
 const AddExpenseForm = () => {
   // Exercise: Consume the AppContext here
-  const {expenses, setExpenses} = useContext(AppContext)
+  const {expenses = [], setExpenses} = useContext(AppContext)
 
   // Exercise: Create name and cost to state variables
   const [description, setDescription] = useState("");
